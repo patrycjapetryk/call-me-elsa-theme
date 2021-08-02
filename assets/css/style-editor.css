@@ -3,16 +3,20 @@
 /**
  * These styles should be loaded by the Block Editor only
  */
+@import url("https://use.typekit.net/qcq1zdr.css");
 
 /* Variables */
 :root {
 
 	/* Font Family */
-	--global--font-primary: var(--font-headings, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif);
-	--global--font-secondary: var(--font-base, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif);
+	--global--font-primary:
+ var(--font-headings, nimbus-sans, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif);
+	--global--font-secondary:
+ var(--font-base, open-sans, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif);
 
 	/* Font Size */
-	--global--font-size-base: 1.25rem;
+	--global--font-size-base: 1rem;
+	--global--font-size-xxs: 0.75rem;
 	--global--font-size-xs: 1rem;
 	--global--font-size-sm: 1.125rem;
 	--global--font-size-md: 1.25rem;
@@ -74,14 +78,15 @@
 	--global--color-white: #fff;
 	--global--color-white-50: rgba(255, 255, 255, 0.5);
 	--global--color-white-90: rgba(255, 255, 255, 0.9);
-	--global--color-primary: var(--global--color-dark-gray);
+	--global--color-primary:
+ var(--global--color-black);
 
 	/* Body text color, site title, footer text color. */
-	--global--color-secondary: var(--global--color-gray);
+	--global--color-secondary: var(--global--color-black);
 
 	/* Headings */
 	--global--color-primary-hover: var(--global--color-primary);
-	--global--color-background: var(--global--color-green);
+	--global--color-background: var(--global--color-white);
 
 	/* Mint, default body background */
 	--global--color-border: var(--global--color-primary);
@@ -101,7 +106,8 @@
 	--form--font-family: var(--global--font-secondary);
 	--form--font-size: var(--global--font-size-sm);
 	--form--line-height: var(--global--line-height-body);
-	--form--color-text: var(--global--color-dark-gray);
+	--form--color-text:
+ var(--global--color-dark-gray);
 	--form--color-ranged: var(--global--color-secondary);
 	--form--label-weight: 500;
 	--form--border-color: var(--global--color-secondary);
@@ -144,7 +150,7 @@
 	--branding--color-link: var(--global--color-primary);
 	--branding--color-link-hover: var(--global--color-secondary);
 	--branding--title--font-family: var(--global--font-primary);
-	--branding--title--font-size: var(--global--font-size-lg);
+	--branding--title--font-size: var(--global--font-size-xl);
 	--branding--title--font-size-mobile: var(--heading--font-size-h4);
 	--branding--title--font-weight: normal;
 	--branding--title--text-transform: uppercase;
@@ -159,7 +165,7 @@
 	/* Main navigation */
 	--primary-nav--font-family: var(--global--font-secondary);
 	--primary-nav--font-family-mobile: var(--global--font-primary);
-	--primary-nav--font-size: var(--global--font-size-md);
+	--primary-nav--font-size: var(--global--font-size-xs);
 	--primary-nav--font-size-sub-menu: var(--global--font-size-xs);
 	--primary-nav--font-size-mobile: var(--global--font-size-sm);
 	--primary-nav--font-size-sub-menu-mobile: var(--global--font-size-sm);
@@ -187,7 +193,7 @@
 	--footer--color-link: var(--global--color-primary);
 	--footer--color-link-hover: var(--global--color-primary-hover);
 	--footer--font-family: var(--global--font-primary);
-	--footer--font-size: var(--global--font-size-sm);
+	--footer--font-size: var(--global--font-size-xxs);
 
 	/* Block: Pull quote */
 	--pullquote--font-family: var(--global--font-primary);
@@ -470,8 +476,7 @@ select {
 a {
 	cursor: pointer;
 	color: var(--wp--style--color--link, var(--global--color-primary));
-	text-underline-offset: 3px;
-	text-decoration-skip-ink: all;
+	text-decoration: none;
 }
 
 a:hover {
@@ -483,7 +488,7 @@ a:hover {
 
 	/* Only visible in Windows High Contrast mode */
 	outline: 2px solid transparent;
-	text-decoration: underline 1px dotted currentColor;
+	text-decoration: none;
 	text-decoration-skip-ink: none;
 	background: rgba(255, 255, 255, 0.9);
 }
